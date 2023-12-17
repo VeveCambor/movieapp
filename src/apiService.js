@@ -5,7 +5,6 @@ const API_KEY = process.env.REACT_APP_API_KEY;
 
 const fetchMoviesByQuery = async (query) => {
   try {
-    // Use the query parameter in the API call
     const response = await fetch(`${API_SEARCH_URL}?api_key=${API_KEY}&query=${encodeURIComponent(query)}`);
     if (!response.ok) throw new Error('Network response was not ok');
     return await response.json();

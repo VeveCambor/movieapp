@@ -6,7 +6,7 @@ const Navigation = () => {
     <AppBar position="static" sx={{ backgroundColor: '#191919' }}> 
       <Toolbar>
         <Typography variant="h6">
-          MovieApp
+          Movie App
         </Typography>
       </Toolbar>
     </AppBar>

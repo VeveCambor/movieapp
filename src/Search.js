@@ -5,7 +5,9 @@ const Search = ({ onSearch }) => {
   const [inputValue, setInputValue] = useState('');
 
   const handleInputChange = (event) => {
-    setInputValue(event.target.value);
+    const newValue = event.target.value;
+    setInputValue(newValue);
+    onSearch(newValue); 
   };
 
   const handleKeyPress = (event) => {
