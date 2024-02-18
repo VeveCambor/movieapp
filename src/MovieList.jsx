@@ -6,11 +6,11 @@ const MovieList = ({ movies, onSelectMovie }) => {
     <Grid container spacing={2}>
       {movies.map(movie => (
         <Grid item key={movie.id} xs={12} sm={6} md={3} onClick={() => onSelectMovie(movie.id)}>
-          <Card sx={{ borderRadius: '10px' }}>
+          <Card sx={{ borderRadius: '10px', height: '100%', '&:hover': { boxShadow: '0px 8px 10px rgba(0, 0, 0)', cursor: "pointer", transform: 'translateY(-5px)'} }}>
             <CardMedia
               component="img"
               height="140"
-              image={ `https://image.tmdb.org/t/p/w500${movie.backdrop_path}` }
+              image={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
               alt={movie.title}
             />
             <CardContent>
